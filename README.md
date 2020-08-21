@@ -2,9 +2,9 @@
 
 In order to practice my Python skills, I've decided to attempt all of the exercises on the [Practice Python](https://www.practicepython.org/) Website.
 
-This is the `master` branch of the github repository, which just contains templates of all of the scripts and the prompt associated with each exercise.
+This is the `solutions` branch of the github repository, which contains my attempted solutions!
 
-The `solutions` branch contains my solutions to the exercises.
+The [`master`](practice-python/) branch contains this file structure without my solutions.
 
 # Goals
 
