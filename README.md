@@ -4,7 +4,7 @@ In order to practice my Python skills, I've decided to attempt all of the exerci
 
 This is the `master` branch of the github repository, which just contains templates of all of the scripts and the prompt associated with each exercise.
 
-The `solutions`(https://github.com/christian-million/practice-python/tree/solutions) branch contains my solutions to the exercises.
+The [`solutions`](https://github.com/christian-million/practice-python/tree/solutions) branch contains my solutions to the exercises.
 
 # Goals
 
