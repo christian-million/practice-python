@@ -4,7 +4,7 @@ In order to practice my Python skills, I've decided to attempt all of the exerci
 
 This is the `solutions` branch of the github repository, which contains my attempted solutions!
 
-The [`master`](practice-python/) branch contains this file structure without my solutions.
+The [`master`](https://github.com/christian-million/practice-python/tree/master) branch contains this file structure without my solutions.
 
 # Goals
 
