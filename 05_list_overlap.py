@@ -1,8 +1,8 @@
 # 05 List Overlap
 # Author: Christian Million
-# Started: 2020-08-18
-# Completed: 2020-08-18
-# Last Modified: 2020-08-18
+# Started: 2020-08-21
+# Completed: 2020-08-21
+# Last Modified: 2020-08-22
 #
 # Prompt: https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html
 #
@@ -17,4 +17,21 @@
 # Extras:
 # 
 # 1. Randomly generate two lists to test this
-# 2. Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
+# 2. Write this in one line of Python
+#   (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
+
+# Import `randint` from the random library
+from random import randint
+
+# Randomly generate two lists to compare
+# Uses list comprehension
+a = [randint(1, 10) for i in range(1, randint(2,10))]
+b = [randint(1, 10) for i in range(1, randint(2,10))]
+
+# Return the randomly generated lists
+print(a)
+print(b)
+
+# Return a Set Comprehension
+# A set can only have unique values.
+c = {i for i in a if i in b}
