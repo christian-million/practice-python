@@ -1,8 +1,8 @@
-# 09 Guessing Game One
+# 10 List Overlap Comprehension
 # Author: Christian Million
-# Started: 2020-08-18
-# Completed: 2020-08-18
-# Last Modified: 2020-08-18
+# Started: 2020-08-22
+# Completed: 2020-08-22
+# Last Modified: 2020-08-22
 #
 # Prompt: https://www.practicepython.org/exercise/2014/04/10/10-list-overlap-comprehensions.html
 #
@@ -27,3 +27,11 @@
 # Extra:
 # 
 # - Randomly generate two lists to test this
+
+# Import Libraries
+from random import randint
+
+# Initialize
+a = [randint(1, 100) for i in range(randint(1, 10))]
+
+print(a)
