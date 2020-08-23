@@ -1,8 +1,8 @@
 # 19 Decode A Web Page Two
 # Author: Christian Million
-# Started: 2020-08-18
-# Completed: 2020-08-18
-# Last Modified: 2020-08-18
+# Started: 2020-08-22
+# Completed: 2020-08-XX
+# Last Modified: 2020-08-22
 #
 # Prompt: https://www.practicepython.org/exercise/2014/07/14/19-decode-a-web-page-two.html
 #

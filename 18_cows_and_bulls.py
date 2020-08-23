@@ -1,8 +1,8 @@
 # 18 Cows And Bulls
 # Author: Christian Million
-# Started: 2020-08-18
-# Completed: 2020-08-18
-# Last Modified: 2020-08-18
+# Started: 2020-08-22
+# Completed: 2020-08-22
+# Last Modified: 2020-08-23
 #
 # Prompt: https://www.practicepython.org/exercise/2014/07/05/18-cows-and-bulls.html
 #
@@ -25,3 +25,49 @@
 #   1 cow, 1 bull
 #   ...
 # Until the user guesses the number.
+
+# Use the randint library
+from random import randint
+
+# Create function to prompt a valid guess
+def getValidGuess(strPrompt, strWarn):
+    while True:
+        try:
+            # Guess must be between 1000 and 9999
+            x = int(input(strPrompt))
+            if(x >= 1000 and x <= 9999):
+                return str(x)
+        except:
+            print(strWarn)
+
+# Count each correct digit in the correct place
+def countCows(target, guess):
+    cows = 0
+    for each in range(len(target)):
+        cows = cows + (target[each] == guess[each])
+    return cows
+
+# Count each correct digit in the wrong place
+def countBulls(target, guess):
+    bulls = 0
+    for each in range(len(target)):
+        bulls = bulls + ((guess[each] in target) and (target[each] != guess[each]))
+    return bulls
+
+# Inititalize
+guessCount = 0
+targetNum = str(randint(1000, 9999))
+playing = True
+
+#print(targetNum)
+while playing:
+    guess = getValidGuess("Guess a four digit number that doesn't start with 0:\n",
+                          "Whoops! Try that again - it won't count against your guesses.")
+    guessCount += 1
+    if(targetNum == guess):
+        print(f'You win in {guessCount} guesses!')
+        playing = False
+    else:
+        print(f'Not quite. Cows: {countCows(targetNum, guess)}; Bulls: {countBulls(targetNum, guess)}')
+
+# Send your regards!

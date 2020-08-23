@@ -31,7 +31,12 @@
 # Import Libraries
 from random import randint
 
-# Initialize
-a = [randint(1, 100) for i in range(randint(1, 10))]
+# Initialize Random lists using list comprehensions
+a = [randint(1, 10) for i in range(randint(1, 10))]
+b = [randint(1, 10) for i in range(randint(1, 10))]
 
-print(a)
+# Convert List Comprehension to Set Comprehension
+c = {i for i in a if i in b}
+
+# Show user
+print(c)

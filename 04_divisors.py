@@ -25,7 +25,13 @@ while not(validNum):
 # Use a list comprehension to get each number that divides nicely into the target number
 # Reading left to right within the brackets, it says:
 #   return divisor for each num in the range IF it there is no remainder.
-divisors = [i for i in range(1, targetNum+1) if targetNum % i == 0]
+# Create a funtion to get a list of divisors of a number
+def divisors(num):
+    if(num == 1):
+        return [1]
+    else:
+        x = [i for i in range(1, num+1) if num%i == 0]
+        return x
 
 
-print(divisors)
+print(divisors(targetNum))

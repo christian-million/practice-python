@@ -13,3 +13,10 @@
 # Extras:
 # 
 # Use binary search.
+
+a = [1, 5, 10, 25, 30, 45, 88, 90, 101]
+
+def contains(target, l):
+    return target in l
+
+print(contains(9, a))
