@@ -1,8 +1,8 @@
 # 20 Element Search
 # Author: Christian Million
-# Started: 2020-08-18
-# Completed: 2020-08-18
-# Last Modified: 2020-08-18
+# Started: 2020-08-23
+# Completed: 2020-08-23
+# Last Modified: 2020-08-24
 #
 # Prompt: https://www.practicepython.org/exercise/2014/11/11/20-element-search.html
 #
@@ -14,9 +14,33 @@
 # 
 # Use binary search.
 
+# Initialize Practice Ordered List
 a = [1, 5, 10, 25, 30, 45, 88, 90, 101]
 
-def contains(target, l):
-    return target in l
+# Checks if target is in original list (ol)
+def contains(target, ol):
+    return target in ol
 
-print(contains(9, a))
+# Extra binary search version
+def binarySearch(x, ol):
+
+    while True:
+        # Find halfway point
+        half_length = len(ol) // 2
+
+        # If halfway point is equal to target then True!
+        if(ol[half_length] == x):
+            return True
+        # If halfway point is last element and not target, then False!
+        elif(len(ol) == 1 and ol[0] != x):
+            return False
+        # Else if halfway point is higher / lower, cut ol in half an start again
+        else:
+            if(ol[half_length] > x):
+                ol = ol[:half_length]
+            else:
+                ol = ol[half_length:]
+
+# Print results to terminal
+print(contains(5,a))
+print(binarySearch(5,a))
