@@ -17,3 +17,20 @@
 # 	"November": 2,
 # 	"December": 1
 # }
+
+# Import libraries
+import json
+from collections import Counter
+import datetime
+
+# 'with' opens a resource manager (google says better that using open() and close())
+with open('practice-python/resources/tng_birthdays.json', 'r') as json_file:
+    tng_birthdays = json.load(json_file)
+
+# Converts the "m/d/y" strings to python dates, then extracts month (%b)
+months = [datetime.datetime.strptime(i, '%m/%d/%Y').strftime('%b') for i in tng_birthdays.values()]
+
+# Counter counts each value in a list
+c = Counter(months)
+
+print(c)
